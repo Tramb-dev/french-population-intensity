@@ -1,0 +1,507 @@
+[
+    {
+      "code": "01",
+      "nom": "Ain",
+      "population": 662244
+    },
+    {
+      "code": "02",
+      "nom": "Aisne",
+      "population": 525503
+    },
+    {
+      "code": "03",
+      "nom": "Allier",
+      "population": 331745
+    },
+    {
+      "code": "04",
+      "nom": "Alpes-de-Haute-Provence",
+      "population": 165702
+    },
+    {
+      "code": "05",
+      "nom": "Hautes-Alpes",
+      "population": 140022
+    },
+    {
+      "code": "06",
+      "nom": "Alpes-Maritimes",
+      "population": 1089270
+    },
+    {
+      "code": "07",
+      "nom": "Ardèche",
+      "population": 327775
+    },
+    {
+      "code": "08",
+      "nom": "Ardennes",
+      "population": 265099
+    },
+    {
+      "code": "09",
+      "nom": "Ariège",
+      "population": 153115
+    },
+    {
+      "code": "10",
+      "nom": "Aube",
+      "population": 310147
+    },
+    {
+      "code": "11",
+      "nom": "Aude",
+      "population": 377719
+    },
+    {
+      "code": "12",
+      "nom": "Aveyron",
+      "population": 279210
+    },
+    {
+      "code": "13",
+      "nom": "Bouches-du-Rhône",
+      "population": 2048395
+    },
+    {
+      "code": "14",
+      "nom": "Calvados",
+      "population": 692839
+    },
+    {
+      "code": "15",
+      "nom": "Cantal",
+      "population": 143280
+    },
+    {
+      "code": "16",
+      "nom": "Charente",
+      "population": 348997
+    },
+    {
+      "code": "17",
+      "nom": "Charente-Maritime",
+      "population": 652474
+    },
+    {
+      "code": "18",
+      "nom": "Cher",
+      "population": 296794
+    },
+    {
+      "code": "19",
+      "nom": "Corrèze",
+      "population": 239071
+    },
+    {
+      "code": "2A",
+      "nom": "Corse-du-Sud",
+      "population": 162753
+    },
+    {
+      "code": "2B",
+      "nom": "Haute-Corse",
+      "population": 186516
+    },
+    {
+      "code": "21",
+      "nom": "Côte-d'Or",
+      "population": 532026
+    },
+    {
+      "code": "22",
+      "nom": "Côtes-d'Armor",
+      "population": 599118
+    },
+    {
+      "code": "23",
+      "nom": "Creuse",
+      "population": 114505
+    },
+    {
+      "code": "24",
+      "nom": "Dordogne",
+      "population": 410730
+    },
+    {
+      "code": "25",
+      "nom": "Doubs",
+      "population": 543221
+    },
+    {
+      "code": "26",
+      "nom": "Drôme",
+      "population": 523122
+    },
+    {
+      "code": "27",
+      "nom": "Eure",
+      "population": 595037
+    },
+    {
+      "code": "28",
+      "nom": "Eure-et-Loir",
+      "population": 428178
+    },
+    {
+      "code": "29",
+      "nom": "Finistère",
+      "population": 914301
+    },
+    {
+      "code": "30",
+      "nom": "Gard",
+      "population": 750683
+    },
+    {
+      "code": "31",
+      "nom": "Haute-Garonne",
+      "population": 1424915
+    },
+    {
+      "code": "32",
+      "nom": "Gers",
+      "population": 191387
+    },
+    {
+      "code": "33",
+      "nom": "Gironde",
+      "population": 1654445
+    },
+    {
+      "code": "34",
+      "nom": "Hérault",
+      "population": 1196633
+    },
+    {
+      "code": "35",
+      "nom": "Ille-et-Vilaine",
+      "population": 1094636
+    },
+    {
+      "code": "36",
+      "nom": "Indre",
+      "population": 216698
+    },
+    {
+      "code": "37",
+      "nom": "Indre-et-Loire",
+      "population": 609408
+    },
+    {
+      "code": "38",
+      "nom": "Isère",
+      "population": 1271078
+    },
+    {
+      "code": "39",
+      "nom": "Jura",
+      "population": 257926
+    },
+    {
+      "code": "40",
+      "nom": "Landes",
+      "population": 416825
+    },
+    {
+      "code": "41",
+      "nom": "Loir-et-Cher",
+      "population": 326375
+    },
+    {
+      "code": "42",
+      "nom": "Loire",
+      "population": 765283
+    },
+    {
+      "code": "43",
+      "nom": "Haute-Loire",
+      "population": 227546
+    },
+    {
+      "code": "44",
+      "nom": "Loire-Atlantique",
+      "population": 1458768
+    },
+    {
+      "code": "45",
+      "nom": "Loiret",
+      "population": 683998
+    },
+    {
+      "code": "46",
+      "nom": "Lot",
+      "population": 174208
+    },
+    {
+      "code": "47",
+      "nom": "Lot-et-Garonne",
+      "population": 329874
+    },
+    {
+      "code": "48",
+      "nom": "Lozère",
+      "population": 76530
+    },
+    {
+      "code": "49",
+      "nom": "Maine-et-Loire",
+      "population": 819528
+    },
+    {
+      "code": "50",
+      "nom": "Manche",
+      "population": 491365
+    },
+    {
+      "code": "51",
+      "nom": "Marne",
+      "population": 561705
+    },
+    {
+      "code": "52",
+      "nom": "Haute-Marne",
+      "population": 168231
+    },
+    {
+      "code": "53",
+      "nom": "Mayenne",
+      "population": 305424
+    },
+    {
+      "code": "54",
+      "nom": "Meurthe-et-Moselle",
+      "population": 729737
+    },
+    {
+      "code": "55",
+      "nom": "Meuse",
+      "population": 179019
+    },
+    {
+      "code": "56",
+      "nom": "Morbihan",
+      "population": 763103
+    },
+    {
+      "code": "57",
+      "nom": "Moselle",
+      "population": 1038440
+    },
+    {
+      "code": "58",
+      "nom": "Nièvre",
+      "population": 199518
+    },
+    {
+      "code": "59",
+      "nom": "Nord",
+      "population": 2598299
+    },
+    {
+      "code": "60",
+      "nom": "Oise",
+      "population": 829695
+    },
+    {
+      "code": "61",
+      "nom": "Orne",
+      "population": 275131
+    },
+    {
+      "code": "62",
+      "nom": "Pas-de-Calais",
+      "population": 1455018
+    },
+    {
+      "code": "63",
+      "nom": "Puy-de-Dôme",
+      "population": 669477
+    },
+    {
+      "code": "64",
+      "nom": "Pyrénées-Atlantiques",
+      "population": 688589
+    },
+    {
+      "code": "65",
+      "nom": "Hautes-Pyrénées",
+      "population": 229190
+    },
+    {
+      "code": "66",
+      "nom": "Pyrénées-Orientales",
+      "population": 480433
+    },
+    {
+      "code": "67",
+      "nom": "Bas-Rhin",
+      "population": 1147474
+    },
+    {
+      "code": "68",
+      "nom": "Haut-Rhin",
+      "population": 763801
+    },
+    {
+      "code": "69",
+      "nom": "Rhône",
+      "population": 1892753
+    },
+    {
+      "code": "70",
+      "nom": "Haute-Saône",
+      "population": 233391
+    },
+    {
+      "code": "71",
+      "nom": "Saône-et-Loire",
+      "population": 547181
+    },
+    {
+      "code": "72",
+      "nom": "Sarthe",
+      "population": 562177
+    },
+    {
+      "code": "73",
+      "nom": "Savoie",
+      "population": 437659
+    },
+    {
+      "code": "74",
+      "nom": "Haute-Savoie",
+      "population": 838480
+    },
+    {
+      "code": "75",
+      "nom": "Paris",
+      "population": 2142366
+    },
+    {
+      "code": "76",
+      "nom": "Seine-Maritime",
+      "population": 1250846
+    },
+    {
+      "code": "77",
+      "nom": "Seine-et-Marne",
+      "population": 1432475
+    },
+    {
+      "code": "78",
+      "nom": "Yvelines",
+      "population": 1452910
+    },
+    {
+      "code": "79",
+      "nom": "Deux-Sèvres",
+      "population": 374350
+    },
+    {
+      "code": "80",
+      "nom": "Somme",
+      "population": 567242
+    },
+    {
+      "code": "81",
+      "nom": "Tarn",
+      "population": 389420
+    },
+    {
+      "code": "82",
+      "nom": "Tarn-et-Garonne",
+      "population": 262254
+    },
+    {
+      "code": "83",
+      "nom": "Var",
+      "population": 1084890
+    },
+    {
+      "code": "84",
+      "nom": "Vaucluse",
+      "population": 560719
+    },
+    {
+      "code": "85",
+      "nom": "Vendée",
+      "population": 691269
+    },
+    {
+      "code": "86",
+      "nom": "Vienne",
+      "population": 438869
+    },
+    {
+      "code": "87",
+      "nom": "Haute-Vienne",
+      "population": 370363
+    },
+    {
+      "code": "88",
+      "nom": "Vosges",
+      "population": 358823
+    },
+    {
+      "code": "89",
+      "nom": "Yonne",
+      "population": 333006
+    },
+    {
+      "code": "90",
+      "nom": "Territoire de Belfort",
+      "population": 138589
+    },
+    {
+      "code": "91",
+      "nom": "Essonne",
+      "population": 1315456
+    },
+    {
+      "code": "92",
+      "nom": "Hauts-de-Seine",
+      "population": 1633100
+    },
+    {
+      "code": "93",
+      "nom": "Seine-Saint-Denis",
+      "population": 1669340
+    },
+    {
+      "code": "94",
+      "nom": "Val-de-Marne",
+      "population": 1418572
+    },
+    {
+      "code": "95",
+      "nom": "Val-d'Oise",
+      "population": 1260042
+    },
+    {
+      "code": "971",
+      "nom": "Guadeloupe ",
+      "population": 375693
+    },
+    {
+      "code": "972",
+      "nom": "Martinique ",
+      "population": 354824
+    },
+    {
+      "code": "973",
+      "nom": "Guyane",
+      "population": 294146
+    },
+    {
+      "code": "974",
+      "nom": "La Réunion",
+      "population": 857809
+    },
+    {
+      "code": "976",
+      "nom": "Mayotte",
+      "population": 288926
+    }
+   ]
