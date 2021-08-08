@@ -15,6 +15,8 @@ app.get('/population', function (req, res) {
     }
   });
 });
+
+app.use('*', express.static('../dist/french-population-intensity'));
  
 app.listen(PORT, () => {
   console.log('Server started and listening on port: ', PORT);
