@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import { HttpClient } from '@angular/common/http';
 
+import { MapService } from 'src/app/services/map.service';
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -11,12 +13,12 @@ export class MapComponent implements OnInit {
   geojson: any;
   myMap: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private mapService: MapService) { }
 
   ngOnInit(): void {
     // Initialisation de la carte
     this.myMap = L.map('mapId').setView([48.853, 2.35], 6);
-    L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
+    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
         maxZoom: 20,
         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
       }).addTo(this.myMap);
@@ -36,7 +38,7 @@ export class MapComponent implements OnInit {
         this.geojson = L.geoJSON(departements, { 
           style: (feature: any) => {
             return {
-              fillColor: this.getColor(feature.properties.density),
+              fillColor: this.mapService.getColor(feature.properties.density),
               weight: 2,
               opacity: 1,
               color: 'white',
@@ -45,55 +47,16 @@ export class MapComponent implements OnInit {
             }
           },
           onEachFeature: (feature: any, layer: any) => {
-            layer.on('mouseover', this.highlightFeature);
+            layer.on('mouseover', this.mapService.highlightFeature);
             layer.on('mouseout', (event: any) => {
-              this.resetHighlight(event, this.geojson);
+              this.mapService.resetHighlight(event, this.geojson);
             });
             layer.on('click', (event: any) => {
-              this.zoomToFeature(event, this.myMap);
+              this.mapService.zoomToFeature(event, this.myMap);
             });
           },
         }).addTo(this.myMap);
       });
     });
-  }
-
-  private highlightFeature(event: any): void {
-    const layerCible = event.target;
-
-    layerCible.setStyle({
-      weight: 5,
-      color: '#666',
-      dashArray: '',
-      fillOpacity: 0.7
-    });
-
-    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-      layerCible.bringToFront();
-    }
-  }
-
-  private resetHighlight(event: any, geojson: any): void {
-    geojson.resetStyle(event.target);
-  }
-
-  private zoomToFeature(event: any, myMap: any) {
-    myMap.fitBounds(event.target.getBounds());
-  }
-
-  /**
-   * Colorie les départements en fonction de leur densité
-   * @param density densité de la population
-   * @returns une couleur en fonction de la densité
-   */
-  private getColor(density: number): string {
-    return  density > 2000000 ? '#800026' :
-            density > 1500000  ? '#BD0026' :
-            density > 1000000  ? '#E31A1C' :
-            density > 750000  ? '#FC4E2A' :
-            density > 500000   ? '#FD8D3C' :
-            density > 250000   ? '#FEB24C' :
-            density > 100000   ? '#FED976' :
-                      '#FFEDA0';
   }
 }

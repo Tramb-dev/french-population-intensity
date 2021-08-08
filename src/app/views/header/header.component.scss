@@ -1,0 +1,57 @@
+@import './src/scss/variables';
+
+header {
+    color: $ftColor;
+}
+
+nav {
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.875rem;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+
+    li {
+        margin: 5px;
+
+        a {
+            text-decoration: none;
+            color: $ftColor;
+            font-size: 1.2em;
+            position: relative;
+            display: inline-block;
+
+            &:hover, &.active {
+                filter: saturate(70%);
+            }
+
+            &:visited {
+                color: $ftColor;
+            }
+
+            &::before {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                content: "";
+                transition: transform .3s ease-out, opacity .3s ease-out;
+                transform: rotate(5deg) translateY(3px);
+                transform-origin: left top;
+                opacity: 0;
+                background-color: $ftColor;
+            }
+
+            &:hover::before, &.active::before {
+                transform: rotate(0) translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}
