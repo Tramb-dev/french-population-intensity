@@ -1,6 +1,17 @@
-<h2>Carte de l'intensité de la population française par département.</h2>
-<div class="map-container">
-    <div class="map-frame">
-        <div id="mapId"></div>
+<section>
+    <h2>Carte de l'intensité de la population française par département.</h2>
+    <div class="map-container">
+        <div class="map-frame">
+            <div id="mapId">
+            </div>
+        </div>
+        <div class="legend">
+            <h3>Légende</h3>
+            <ul>
+                <li *ngFor="let color of colors">
+                    <span class="legend-color" [ngStyle]="{'background-color': color[0]}"></span><span>> {{ color[1] | number:'1.0':'fr' }}</span>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
+</section>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import { HttpClient } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import localeFR from '@angular/common/locales/fr';
+registerLocaleData(localeFR, 'fr');
 
 import { MapService } from 'src/app/services/map.service';
 
@@ -11,13 +14,17 @@ import { MapService } from 'src/app/services/map.service';
 })
 export class MapComponent implements OnInit {
   geojson: any;
+  colors: [string, number][];
   myMap: any;
 
-  constructor(private http: HttpClient, private mapService: MapService) { }
+  constructor(private http: HttpClient, private mapService: MapService) { 
+    this.colors = mapService.colors;
+    this.myMap = mapService.myMap;
+  }
 
   ngOnInit(): void {
     // Initialisation de la carte
-    this.myMap = L.map('mapId').setView([48.853, 2.35], 6);
+    this.myMap = L.map('mapId').setView([46.853, 2.35], 6);
     L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
         maxZoom: 20,
         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -26,8 +33,7 @@ export class MapComponent implements OnInit {
     // Chargement du fichier Geojson pour l'intégration des départements
     this.http.get('assets/data/departements.geojson').subscribe((departements: any) => {
       // Chargement de la densité de population
-      this.http.get('assets/data/population-dep.json').subscribe((populations: any) => {
-      //this.http.get('/population').subscribe((populations: any) => {
+      this.http.get('/population').subscribe((populations: any) => {
         for (const departement of departements.features) {
           for (const population of populations) {
             if (departement.properties.code === population.code) {
@@ -35,6 +41,7 @@ export class MapComponent implements OnInit {
             }
           }
         }
+        // Création des couches sur la carte
         this.geojson = L.geoJSON(departements, { 
           style: (feature: any) => {
             return {
@@ -43,7 +50,7 @@ export class MapComponent implements OnInit {
               opacity: 1,
               color: 'white',
               dashArray: '3',
-              fillOpacity: 0.7
+              fillOpacity: 0.9
             }
           },
           onEachFeature: (feature: any, layer: any) => {
@@ -58,5 +65,7 @@ export class MapComponent implements OnInit {
         }).addTo(this.myMap);
       });
     });
+
+    
   }
 }

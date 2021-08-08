@@ -6,10 +6,21 @@ header {
 
 nav {
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 1.875rem;
+    flex-direction: column;
+
+    .logo {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (min-width: $sm) {
+    nav {
+        flex-direction: row;
+    }
 }
 
 ul {
@@ -17,7 +28,7 @@ ul {
     list-style: none;
 
     li {
-        margin: 5px;
+        margin: 5px calc(10px + .8vw);
 
         a {
             text-decoration: none;

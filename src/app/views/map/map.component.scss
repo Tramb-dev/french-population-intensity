@@ -1,9 +1,55 @@
- 
-  .map-frame {
-    border: 2px solid black;
-    height: 500px;
+@import "./src/scss/variables";
+
+section {
+  margin: 0 1.2vw;
+}
+
+h2 {
+  margin: 0 1vw .6em;
+  font-size: calc(1.35rem + 1vw);
+  text-decoration: underline solid darken($color: $ftColor, $amount: 5%);
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 75vh;
+  flex-grow: 5;
+}
+
+#mapId {
+  height: 100%;
+}
+
+.legend {
+  margin: 10px 30px;
+
+  ul {
+    list-style: none;
+    padding: 0;
   }
-  
-  #mapId {
-    height: 500px;
+
+  li {
+    display: flex;
+    padding: 2px;
   }
+
+  .legend-color {
+    width: 50px;
+    height: 20px;
+    display: inline-block;
+    border: lightgray 1px solid;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: $md) {
+  .map-container {
+    flex-direction: row;
+  }
+}
