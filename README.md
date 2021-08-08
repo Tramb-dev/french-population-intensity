@@ -4,4 +4,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## How to run this project
 
-First install all the dependencies by executing `npm install`. Then run `node run server/server.js` for a node server. Navigate to `http://localhost:8080/` or your configured environment port to see the project.
+First install all the dependencies by executing `npm install`. Then run `node server/server.js` for a node server. Navigate to `http://localhost:8080/` or your configured environment port to see the project.
