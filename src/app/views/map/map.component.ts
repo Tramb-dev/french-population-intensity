@@ -19,12 +19,36 @@ export class MapComponent implements OnInit {
       }).addTo(myMap);
 
     this.http.get('assets/data/departements.geojson').subscribe((departements: any) => {
-      L.geoJSON(departements).addTo(myMap);
-    });
-
-    this.http.get('/population').subscribe((population: any) => {
-      console.log(population);
+      this.http.get('/population').subscribe((populations: any) => {
+        for (const departement of departements.features) {
+          for (const population of populations) {
+            if (departement.properties.code === population.code) {
+              departement.properties.density = population.population;
+            }
+          }
+        }
+        L.geoJSON(departements, { style: (feature: any) => {
+          return {
+            fillColor: this.getColor(feature.properties.density),
+            weight: 2,
+            opacity: 1,
+            color: 'white',
+            dashArray: '3',
+            fillOpacity: 0.7
+          };
+        } }).addTo(myMap);
+      });
     });
   }
 
+  getColor(density: number): string {
+    return  density > 2000000 ? '#800026' :
+            density > 1500000  ? '#BD0026' :
+            density > 1000000  ? '#E31A1C' :
+            density > 750000  ? '#FC4E2A' :
+            density > 500000   ? '#FD8D3C' :
+            density > 250000   ? '#FEB24C' :
+            density > 100000   ? '#FED976' :
+                      '#FFEDA0';
+  }
 }
