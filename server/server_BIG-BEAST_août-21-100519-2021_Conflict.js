@@ -2,7 +2,7 @@ const express = require('express');
 const file = require('./files/file');
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 
 app.use('/', express.static('../dist/french-population-intensity'));
  
